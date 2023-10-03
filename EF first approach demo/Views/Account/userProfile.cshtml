@@ -1,0 +1,39 @@
+﻿@model EF_first_approach_demo.Identity.ApplicationUser
+@{
+    ViewBag.Title = "Profile";
+}
+
+
+<table class="table">
+    <tbody>
+        <tr>
+            <th>User Name</th>
+            <td>@Html.DisplayFor(temp => temp.UserName)</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>@Html.DisplayFor(temp => temp.Email)</td>
+        </tr>
+
+        <tr>
+            <th>Address</th>
+            <td>@Html.DisplayFor(temp => temp.Address)</td>
+        </tr>
+
+        <tr>
+            <th>Date of Birth</th>
+            <td>@Html.DisplayFor(temp => temp.BirthDay)</td>
+        </tr>
+        <tr>
+            <th>Phone Number</th>
+            <td>@Html.DisplayFor(temp => temp.PhoneNumber)</td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>@Html.DisplayFor(temp => temp.City)</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<a class="btn btn-danger" href="/home/index">back to home</a>

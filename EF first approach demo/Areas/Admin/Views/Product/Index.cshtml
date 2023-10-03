@@ -1,15 +1,19 @@
 ﻿@model List<EF_first_approach_demo.Models.Product>
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
 }
 
 @section searchFacility
 {
-    <div class="flex-grow-1"></div>
-    <form class="d-flex" action="/product/index">
-        <input type="search" class="form-control p-2 my-1 " name="search" placeholder="Search..." value="@ViewBag.searchItem" />
-        <button class="btn btn-warning p-2 m-1 ">Search</button>
+    
+    <form class="mx-2" action="/admin/product/index">
+        <div class="input-group">
+            <input type="search" class="form-control p-2 my-1 " name="search" placeholder="search products" value="@ViewBag.searchItem" />
+            <div class="input-group-append">
+                <button class="btn btn-warning p-2 m-1 ">Search</button>
+            </div>
+        </div>        
     </form>
 }
 
@@ -19,7 +23,7 @@
             <th class="text-bg-secondary text-wrap text-center">
                 @if (ViewBag.iconClass == "fa-sort-desc")
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=ProductID&iconClass=fa-sort-asc&PageNo=1">Product ID</a>
+                    <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=ProductID&iconClass=fa-sort-asc&PageNo=1">Product ID</a>
                     if (ViewBag.sortColumn == "ProductID")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -27,7 +31,7 @@
                 }
                 else
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=ProductID&iconClass=fa-sort-desc&PageNo=1">Product ID</a>
+                    <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=ProductID&iconClass=fa-sort-desc&PageNo=1">Product ID</a>
                     if (ViewBag.sortColumn == "ProductID")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -40,7 +44,7 @@
             <th class="text-bg-secondary text-wrap text-center">
                 @if (ViewBag.iconClass == "fa-sort-desc")
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=ProductName&iconClass=fa-sort-asc&PageNo=1">Product Name</a>
+                    <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=ProductName&iconClass=fa-sort-asc&PageNo=1">Product Name</a>
                     if (ViewBag.sortColumn == "ProductName")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -48,7 +52,7 @@
                 }
                 else
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=ProductName&iconClass=fa-sort-desc&PageNo=1">Product Name</a>
+                    <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=ProductName&iconClass=fa-sort-desc&PageNo=1">Product Name</a>
                     if (ViewBag.sortColumn == "ProductName")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -58,7 +62,7 @@
             <th class="text-bg-secondary text-wrap text-center">
                 @if (ViewBag.iconClass == "fa-sort-desc")
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=Price&iconClass=fa-sort-asc&PageNo=1">Price</a>
+                    <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=Price&iconClass=fa-sort-asc&PageNo=1">Price</a>
                     if (ViewBag.sortColumn == "Price")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -66,7 +70,7 @@
                 }
                 else
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=Price&iconClass=fa-sort-desc&PageNo=1">Price</a>
+                    <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=Price&iconClass=fa-sort-desc&PageNo=1">Price</a>
                     if (ViewBag.sortColumn == "Price")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -76,7 +80,7 @@
             <th class="text-bg-secondary text-wrap text-center">
                 @if (ViewBag.iconClass == "fa-sort-desc")
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=DateOfPurchase&iconClass=fa-sort-asc&PageNo=1">Invoice Date</a>
+                    <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=DateOfPurchase&iconClass=fa-sort-asc&PageNo=1">Invoice Date</a>
                     if (ViewBag.sortColumn == "DateOfPurchase")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -84,7 +88,7 @@
                 }
                 else
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=DateOfPurchase&iconClass=fa-sort-desc&PageNo=1">Invoice Date</a>
+                    <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=DateOfPurchase&iconClass=fa-sort-desc&PageNo=1">Invoice Date</a>
                     if (ViewBag.sortColumn == "DateOfPurchase")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -94,7 +98,7 @@
             <th class="text-bg-secondary text-wrap text-center">
                 @if (ViewBag.iconClass == "fa-sort-desc")
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=Quantity&iconClass=fa-sort-asc&PageNo=1">Invoice Date</a>
+                    <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=Quantity&iconClass=fa-sort-asc&PageNo=1">Quantity</a>
                     if (ViewBag.sortColumn == "Quantity")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -102,7 +106,7 @@
                 }
                 else
                 {
-                    <a class="text-white text-decoration-none" href="/product/index?sortColumn=Quantity&iconClass=fa-sort-desc&PageNo=1">Invoice Date</a>
+            <a class="text-white text-decoration-none" href="/admin/product/index?sortColumn=Quantity&iconClass=fa-sort-desc&PageNo=1">Quantity</a>
                     if (ViewBag.sortColumn == "Quantity")
                     {
                         <i class="fa @ViewBag.iconClass"></i>
@@ -129,10 +133,10 @@
                 <td>@item.Brand.BrandName</td>
                 <td>@item.Category.CategoryName</td>
                 <td>@item.AvailabilityStatus</td>
-                <td><a href="/product/details/@item.ProductID">Details</a></td>
+                <td><a href="/admin/product/details/@item.ProductID">Details</a></td>
                 <td>
-                    <a class="btn btn-success btn-sm" href="/product/update/@item.ProductID">Update</a>
-                    <a class="btn btn-danger btn-sm" href="/product/remove/@item.ProductID">Delete</a>
+                    <a class="btn btn-success btn-sm" href="/admin/product/update/@item.ProductID">Update</a>
+                    <a class="btn btn-danger btn-sm" href="/admin/product/remove/@item.ProductID">Delete</a>
                 </td>
             </tr>
         }
@@ -140,7 +144,7 @@
     </tbody>
 </table>
 
-<a class="btn btn-success m-3" href="/product/create">Create New Product</a>
+<a class="btn btn-success m-3" href="/admin/product/create">Create New Product</a>
 
 <footer>
     @{
@@ -152,18 +156,18 @@
         ViewBag.next = next;
     }
     <ul class="pagination justify-content-center ">
-        <li class="page-item m-1"><a class="page-link text-black rounded-pill" href="/product/index?sortColumn=@ViewBag.sortColumn&iconClass=@ViewBag.iconClass&PageNo=@ViewBag.previous">Prev</a></li>
+        <li class="page-item m-1"><a class="page-link text-black rounded-pill" href="/admin/product/index?sortColumn=@ViewBag.sortColumn&iconClass=@ViewBag.iconClass&PageNo=@ViewBag.previous">Prev</a></li>
         @for (int i = 0; i < ViewBag.NoOfPages; i++)
         {
             if ((i + 1) == ViewBag.PageNo)
             {
-                <li class="page-item active m-1"><a class="page-link bg-warning rounded-pill border-warning text-black " href="/product/index?sortColumn=@ViewBag.sortColumn&iconClass=@ViewBag.iconClass&PageNo=@(i+1)">@(i+1)</a></li>
+                <li class="page-item active m-1"><a class="page-link bg-warning rounded-pill border-warning text-black " href="/admin/product/index?sortColumn=@ViewBag.sortColumn&iconClass=@ViewBag.iconClass&PageNo=@(i+1)">@(i+1)</a></li>
             }
             else
             {
-                <li class="page-item m-1"><a class="page-link text-black rounded-pill" href="/product/index?sortColumn=@ViewBag.sortColumn&iconClass=@ViewBag.iconClass&PageNo=@(i+1)">@(i+1)</a></li>
+                <li class="page-item m-1"><a class="page-link text-black rounded-pill" href="/admin/product/index?sortColumn=@ViewBag.sortColumn&iconClass=@ViewBag.iconClass&PageNo=@(i+1)">@(i+1)</a></li>
             }
         }
-        <li class="page-item m-1 "><a class="page-link text-black rounded-pill" href="/product/index?sortColumn=@ViewBag.sortColumn&iconClass=@ViewBag.iconClass&PageNo=@ViewBag.next">Next</a></li>
+        <li class="page-item m-1 "><a class="page-link text-black rounded-pill" href="/admin/product/index?sortColumn=@ViewBag.sortColumn&iconClass=@ViewBag.iconClass&PageNo=@ViewBag.next">Next</a></li>
     </ul>
 </footer>

@@ -1,0 +1,27 @@
+﻿@model EF_first_approach_demo.ViewModels.LoginViewModel
+@{
+    ViewBag.Title = "Login";    
+}
+
+
+@using (Html.BeginForm("login", "account", FormMethod.Post, new { enctype = "multipart/form-data", @class = "bg-body-secondary p-3 my-5 m-auto ", style="width:400px;" }))
+{
+    <div class="form-group mx-auto" style="width:300px">
+        <h1 class="text-center m-5">Login</h1>
+        <div class="form-group col-md-12">
+            @Html.LabelFor(temp => temp.Username, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Username, new { @class = "form-control my-2", placeholder = "Enter Username" })
+            @Html.ValidationMessageFor(temp => temp.Username)
+        </div>
+        <div class="form-group col-md-12 my-3">
+            @Html.LabelFor(temp => temp.Password, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Password, new { @class = "form-control my-2", placeholder = "Enter Password", type = "password" })
+            @Html.ValidationMessageFor(temp => temp.Password)
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-outline-success m-3 " type="submit">Login</button>
+        <a class="btn btn-outline-danger m-2" href="/account/register">Register</a>
+    </div>
+
+}

@@ -5,11 +5,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace EF_first_approach_demo.Controllers
+namespace EF_first_approach_demo.Areas.Admin.Controllers
 {
     public class CategoriesController : Controller
     {
-        [Route("categories/index")]
+        [Route("admin/categories/index")]
         public ActionResult Index()
         {
             codeFirstDbContext db = new codeFirstDbContext();

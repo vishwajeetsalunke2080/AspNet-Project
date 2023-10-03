@@ -2,11 +2,11 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
 }
 
 <h1 class="text-center m-5 text-decoration-underline">Add New Product</h1>
-@using(Html.BeginForm("create", "product", FormMethod.Post, new { enctype = "multipart/form-data", @class = "bg-body-secondary p-3 my-3" }))
+@using (Html.BeginForm("create", "product", new {area="Admin"}, FormMethod.Post, new { enctype = "multipart/form-data", @class = "bg-body-secondary p-3 my-3" }))
 {
 <div class="form-group row my-3">
     <div class="col-md-6">
@@ -64,7 +64,7 @@
 
     <div class="form-group text-center">
         <button class="btn btn-outline-success m-2" type="submit">Add Product</button>
-        <a class="btn btn-outline-danger m-2" href="/product/index">Cancel</a>
+        <a class="btn btn-outline-danger m-2" href="/admin/product/index">Cancel</a>
     </div>
 
     @Html.ValidationSummary()

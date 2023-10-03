@@ -16,7 +16,8 @@ namespace EF_first_approach_demo
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "EF_first_approach_demo.Controllers" }                
             );
         }
     }

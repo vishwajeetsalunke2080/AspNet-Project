@@ -2,17 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
-
-namespace EF_first_approach_demo.Controllers
+namespace EF_first_approach_demo.Areas.Admin.Controllers
 {
     public class ProductController : Controller
     {
         codeFirstDbContext db = new codeFirstDbContext();
         public ActionResult Index(string search = "", string sortColumn = "ProductID", string iconClass = "fa-sort-asc", int PageNo = 1)
         {
-            
+
             ViewBag.searchItem = search;
             List<Product> products = db.Products.Where(temp => temp.ProductName.Contains(search)).ToList();
 
@@ -90,7 +90,7 @@ namespace EF_first_approach_demo.Controllers
         //Product details action             
         public ActionResult Details(long id)
         {
-            
+
             Product product = db.Products.Where(temp => temp.ProductID == id).FirstOrDefault();
             return View(product);
         }
@@ -98,14 +98,14 @@ namespace EF_first_approach_demo.Controllers
         //Product create action
         public ActionResult Create()
         {
-            
+
             ViewBag.Brand = db.Brands.ToList();
             ViewBag.Category = db.Categories.ToList();
             return View();
         }
 
         [HttpPost]
-        public ActionResult Create([Bind(Include ="ProductID,ProductName,Price,DateOfPurchase,AvailabilityStatus,BrandID,CategoryID,Active,Photo,Quantity")]Product p)
+        public ActionResult Create([Bind(Include = "ProductID,ProductName,Price,DateOfPurchase,AvailabilityStatus,BrandID,CategoryID,Active,Photo,Quantity")] Product p)
         {
             ViewBag.Brand = db.Brands.ToList();
             ViewBag.Category = db.Categories.ToList();
@@ -131,7 +131,7 @@ namespace EF_first_approach_demo.Controllers
 
         public ActionResult Update(long id)
         {
-            
+
             Product product = db.Products.Where(temp => temp.ProductID == id).FirstOrDefault();
             ViewBag.Brand = db.Brands.ToList();
             ViewBag.Category = db.Categories.ToList();
@@ -173,7 +173,7 @@ namespace EF_first_approach_demo.Controllers
 
         public ActionResult Remove(long id)
         {
-            
+
             Product product = db.Products.Where(temp => temp.ProductID == id).FirstOrDefault();
             db.Products.Remove(product);
             db.SaveChanges();
@@ -181,14 +181,3 @@ namespace EF_first_approach_demo.Controllers
         }
     }
 }
-
-
-
-
-
-
-
-//this is a method of accessing stored procedures in SQL
-
-//SqlParameter[] param = new SqlParameter[] { new SqlParameter("@BrandID", 2) };
-//List<Product> products = db.Database.SqlQuery<Product>("exec getByBrandID @BrandID",param).ToList();

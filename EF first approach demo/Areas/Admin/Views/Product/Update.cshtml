@@ -1,12 +1,12 @@
 ﻿@model EF_first_approach_demo.Models.Product
 @{
     ViewBag.Title = "Update";
-    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
 }
 
 
 <h1 class="text-center m-5 text-decoration-underline">Update Product Details</h1>
-@using (Html.BeginForm("update", "product", FormMethod.Post ,new { enctype = "multipart/form-data", @class = "bg-body-secondary p-3 my-3" }))
+@using (Html.BeginForm("update", "product", new {area="Admin"}, FormMethod.Post ,new { enctype = "multipart/form-data", @class = "bg-body-secondary p-3 my-3" }))
 {
     @Html.TextBoxFor(temp => temp.ProductID , new {@type="hidden"})
     
@@ -80,7 +80,7 @@
     </div>
     <div class="form-group text-center">
         <button class="btn btn-outline-success m-2" type="submit">Update Details</button>
-        <a class="btn btn-outline-danger m-2" href="/product/index">Cancel</a>
+        <a class="btn btn-outline-danger m-2" href="/admin/product/index">Cancel</a>
     </div>
 
 }

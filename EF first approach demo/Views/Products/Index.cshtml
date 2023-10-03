@@ -1,0 +1,25 @@
+﻿@model List<EF_first_approach_demo.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 class="text-center"> Product Catalog</h1>
+
+<div class="card-group ">
+    @foreach (var item in Model)
+    {
+     
+         <div class="card m-3 rounded-2 border-3 " >
+             <img class="card-img-top mx-auto" src="data:image;base64,@item.Photo" alt="Product Image" style="aspect-ratio:16/14">
+             <div class="card-body bg-body-secondary">
+                 <h4 class="card-title">@item.ProductName</h4>
+                 <h5>₹ @item.Price</h5>
+                 <p>@((item.Brand != null) ? item.Brand.BrandName : " ")</p>
+                 
+             </div>
+         </div>
+     
+    }
+
+</div>
+

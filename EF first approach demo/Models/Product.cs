@@ -15,7 +15,7 @@ namespace EF_first_approach_demo.Models
 
 
         [Required]
-        [RegularExpression(@"^[A-Za-z ]*$", ErrorMessage ="Alphabets Only")]
+        [RegularExpression(@"^[A-Za-z0-9 ]*$", ErrorMessage ="Alphabets Only")]
         [Display(Name = "Product Name")]
         [MaxLength(40, ErrorMessage ="Name should be within 40 characters")]
         [MinLength(2,ErrorMessage ="Name should be at least 2 characters long")]
@@ -23,7 +23,7 @@ namespace EF_first_approach_demo.Models
 
 
         [Required]
-        [Range(0,10000, ErrorMessage ="Prce should be less than 10,000")]
+        [Range(0,1000000, ErrorMessage ="Price should be less than 10,00,000")]
         [RegularExpression(@"^[0-9.]*$", ErrorMessage = "Invalid input only numbers accepted")]
         public Nullable<decimal> Price { get; set; }
 

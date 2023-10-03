@@ -50,7 +50,7 @@ namespace EF_first_approach_demo.Controllers
                     var userIdentity = usermanager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                     authManager.SignIn(new AuthenticationProperties(), userIdentity);
                 }
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Login", "Account");
             }
             
             else
@@ -58,6 +58,70 @@ namespace EF_first_approach_demo.Controllers
                 ModelState.AddModelError("login error", "Invalid Data Passed");
                 return View();
             }
+        }
+
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Login(LoginViewModel loginViewModel)
+        {
+            
+                var appDbContext = new ApplicationDbContext();
+                var userStore = new ApplicationUserStore(appDbContext);
+                var userManager = new ApplicationUserManager(userStore);
+
+                var user = userManager.Find(loginViewModel.Username,loginViewModel.Password);
+
+                if(user != null)
+                {
+                    //login
+
+                    var appAuthManager = HttpContext.GetOwinContext().Authentication;
+                    var userIdentity = userManager.CreateIdentity(user,DefaultAuthenticationTypes.ApplicationCookie);
+                    appAuthManager.SignIn(new AuthenticationProperties(),userIdentity);
+                    
+                    if(userManager.IsInRole(user.Id,"Admin"))
+                    {
+                        return RedirectToAction("Index", "Home", new {area="Admin"});
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                    
+                }              
+                return View();
+        }
+
+
+        public ActionResult Logout()
+        {
+           if(User.Identity.IsAuthenticated)
+            {
+                var appAuthManager = HttpContext.GetOwinContext().Authentication;
+                appAuthManager.SignOut();
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                return Content("Already Logged Out", "text/html");
+            }
+           
+        }
+
+
+        public ActionResult userProfile()
+        {
+            var userDbContext = new ApplicationDbContext();
+            var userStore = new ApplicationUserStore(userDbContext);
+            var userManager = new ApplicationUserManager(userStore);
+            ApplicationUser profile = userManager.FindById(User.Identity.GetUserId());
+            return View(profile);
         }
     }
 }

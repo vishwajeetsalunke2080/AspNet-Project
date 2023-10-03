@@ -7,14 +7,14 @@ using System.Web.Mvc;
 
 namespace EF_first_approach_demo.Controllers
 {
-    public class BrandController : Controller
+    public class ProductsController : Controller
     {
-        [Route("brands/index")]
+        // GET: Products
         public ActionResult Index()
         {
-            codeFirstDbContext db = new codeFirstDbContext();
-            List<Brand> brands = db.Brands.ToList();
-            return View(brands);
+            codeFirstDbContext db  = new codeFirstDbContext();
+            List<Product> products = db.Products.ToList();
+            return View(products);
         }
     }
 }
