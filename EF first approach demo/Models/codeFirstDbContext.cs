@@ -10,7 +10,7 @@ namespace EF_first_approach_demo.Models
 {
     public class codeFirstDbContext : DbContext
     {
-        public codeFirstDbContext() : base("myConnection") 
+        public codeFirstDbContext() : base("AzureSQL") 
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<codeFirstDbContext, Configuration>());
         }
