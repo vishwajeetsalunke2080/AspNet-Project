@@ -1,0 +1,72 @@
+﻿@model EF_first_approach_demo.Models.Product
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h1 class="text-center m-5 text-decoration-underline">Add New Product</h1>
+@using(Html.BeginForm("create", "product", FormMethod.Post, new { enctype = "multipart/form-data", @class = "bg-body-secondary p-3 my-3" }))
+{
+<div class="form-group row my-3">
+    <div class="col-md-6">
+        @Html.LabelFor(temp => temp.ProductName, new { @class = "fw-bold" })
+        @Html.TextBoxFor(temp => temp.ProductName, new { @class = "form-control", placeholder = "Product Name" })
+        @Html.ValidationMessageFor(temp => temp.ProductName)
+    </div>
+    <div class="col-md-6">
+        @Html.LabelFor(temp => temp.Price, new { @class = "fw-bold" })
+        @Html.TextBoxFor(temp => temp.Price, new { @class = "form-control", placeholder = "Amount" })
+        @Html.ValidationMessageFor(temp => temp.Price)
+    </div>
+</div>
+<div class="form-group row my-3">
+    <div class="col-md-6">
+        @Html.LabelFor(temp => temp.DateOfPurchase, new { @class = "fw-bold" })
+        <input type="date" name="DateOfPurchase" class="form-control" />
+        @Html.ValidationMessageFor(temp => temp.DateOfPurchase)
+    </div>
+    <div class="col-md-6">
+        @Html.LabelFor(temp => temp.AvailabilityStatus, new { @class = "fw-bold" })
+        @Html.TextBoxFor(temp => temp.AvailabilityStatus, new { placeholder = "Availability Status", @class = "form-control" })
+        @Html.ValidationMessageFor(temp => temp.AvailabilityStatus)
+    </div>
+</div>
+<div class="form-group row my-3">
+    <div class="col-md-6">
+        @Html.LabelFor(temp => temp.CategoryID, new { @class = "fw-bold" })
+        @Html.DropDownListFor(temp => temp.CategoryID, new SelectList(ViewBag.Category, "CategoryID", "CategoryName"), "Please Select", new { @class = "form-control" })
+        @Html.ValidationMessageFor(temp => temp.CategoryID)
+    </div>
+    <div class="col-md-6">
+        @Html.LabelFor(temp => temp.BrandID, new { @class = "fw-bold" })
+        @Html.DropDownListFor(temp => temp.BrandID, new SelectList(ViewBag.Brand, "BrandID", "BrandName"), "Please Select", new { @class = "form-control" })
+        @Html.ValidationMessageFor(temp => temp.BrandID)
+    </div>
+</div>
+<div class="form-group row my-3">
+    <div class="col-md-6">
+        <label for="Photo" class="fw-bold">Upload Product Image</label>
+        <input type="file" class="form-control " id="Image" name="Photo" />
+        @Html.ValidationMessageFor(temp => temp.Photo)
+    </div>
+    <div class="col-md-6">
+        @Html.LabelFor(temp=>temp.Quantity, new { @class = "fw-bold" })
+        @Html.TextBoxFor(temp=>temp.Quantity, new {@class="form-control", type="number", @Value="1"})
+        @Html.ValidationMessageFor(temp => temp.Photo)
+    </div>
+</div>
+    <div class="form-check p-1">
+        <input class="my-2" type="checkbox" name="Active" value="true" />
+        <label for="Active" class="fw-bold">Active</label>
+        @Html.ValidationMessageFor(temp => temp.Active)
+    </div>
+
+    <div class="form-group text-center">
+        <button class="btn btn-outline-success m-2" type="submit">Add Product</button>
+        <a class="btn btn-outline-danger m-2" href="/product/index">Cancel</a>
+    </div>
+
+    @Html.ValidationSummary()
+    }
+

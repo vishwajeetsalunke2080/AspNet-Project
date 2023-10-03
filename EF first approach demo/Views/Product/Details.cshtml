@@ -1,0 +1,45 @@
+﻿
+@model EF_first_approach_demo.Models.Product
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<table class="table">
+    <tbody>
+        <tr>
+            <th>Product ID</th>
+            <td>@Html.DisplayFor(temp=>temp.ProductID)</td>
+        </tr>
+        <tr>
+            <th>Product Name</th>
+            <td>@Html.DisplayFor(temp=>temp.ProductName)</td>
+        </tr>
+
+        <tr>
+            <th>Price</th>
+            <td>@Html.DisplayFor(temp => temp.Price)</td>
+        </tr>
+
+        <tr>
+            <th>Invoice Date</th>
+            <td>@Html.DisplayFor(temp=>temp.DateOfPurchase)</td>
+        </tr>
+        <tr>
+            <th>Brand ID</th>
+            <td>@Html.DisplayFor(temp=>temp.Brand.BrandName)</td>
+        </tr>
+        <tr>
+            <th>Category ID</th>
+            <td>@Html.DisplayFor(temp=>temp.Category.CategoryName)</td>
+        </tr>
+        <tr>
+            <th>Availability Status</th>
+            <td>@Html.DisplayFor(temp => temp.AvailabilityStatus)</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+<a class="btn btn-danger" href="/product/index">back to products</a>
+

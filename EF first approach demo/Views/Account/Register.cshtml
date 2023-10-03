@@ -1,0 +1,67 @@
+﻿@model EF_first_approach_demo.ViewModels.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h1 class="text-center m-5 text-decoration-underline">Add New Product</h1>
+@using (Html.BeginForm("register", "account", FormMethod.Post, new { enctype = "multipart/form-data", @class = "bg-body-secondary p-3 my-3" }))
+{
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Username, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Username, new { @class = "form-control", placeholder = "Product Name" })
+            @Html.ValidationMessageFor(temp => temp.Username)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Email, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Email, new { @class = "form-control", placeholder = "Amount" })
+            @Html.ValidationMessageFor(temp => temp.Email)
+        </div>
+    </div>
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Password, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Password, new { @class = "form-control", placeholder = "Amount" })
+            @Html.ValidationMessageFor(temp => temp.Password)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.ConfirmPassword, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.ConfirmPassword, new { placeholder = "Availability Status", @class = "form-control" })
+            @Html.ValidationMessageFor(temp => temp.ConfirmPassword)
+        </div>
+    </div>
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Mobile, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Mobile, new { @class = "form-control", type = "number" })
+            @Html.ValidationMessageFor(temp => temp.Mobile)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.DateOfBirth, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.DateOfBirth, new { @class = "form-control", type = "date" })
+            @Html.ValidationMessageFor(temp => temp.DateOfBirth)
+        </div>
+    </div>
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Address, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Address, new { @class = "form-control" })
+            @Html.ValidationMessageFor(temp => temp.Address)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.City, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.City, new { @class = "form-control"})
+            @Html.ValidationMessageFor(temp => temp.City)
+        </div>
+    </div>
+    
+    <div class="form-group text-center">
+        <button class="btn btn-success m-2" type="submit">Register</button>
+        <a class="btn btn-danger m-2" href="/account/login">Login</a>
+    </div>
+
+    @Html.ValidationSummary()
+}
+
+

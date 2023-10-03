@@ -1,0 +1,103 @@
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\EF first approach demo.dll.config
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\EF first approach demo.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\EF first approach demo.pdb
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\csc.exe
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\csc.exe.config
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\csc.rsp
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\csi.exe
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\csi.exe.config
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\csi.rsp
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.Managed.Core.targets
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.AppContext.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Collections.Immutable.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Console.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Globalization.Calendars.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.IO.Compression.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.IO.FileSystem.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Net.Http.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Net.Sockets.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Reflection.Metadata.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.ValueTuple.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Xml.XmlDocument.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Xml.XPath.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\vbc.exe
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\vbc.exe.config
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\vbc.rsp
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\VBCSCompiler.exe
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\roslyn\VBCSCompiler.exe.config
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Web.Infrastructure.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Helpers.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Mvc.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Razor.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Webpages.Deployment.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Webpages.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Webpages.Razor.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Razor.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Webpages.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Webpages.Deployment.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Webpages.Razor.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Helpers.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\System.Web.Mvc.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF first approach demo.csproj.AssemblyReference.cache
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF first approach demo.csproj.CoreCompileInputs.cache
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF first approach demo.csproj.CopyComplete
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF first approach demo.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF first approach demo.pdb
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\EntityFramework.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\EntityFramework.SqlServer.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\EntityFramework.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\EntityFramework.SqlServer.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF_first_approach_demo.Migrations.InitialCreate.resources
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF first approach demo.csproj.GenerateResource.cache
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF_first_approach_demo.Migrations.quantity.resources
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF_first_approach_demo.Migrations.editColumn.resources
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF_first_approach_demo.Migrations.deleteColMods.resources
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF_first_approach_demo.Migrations.AddedValidationSchema.resources
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF_first_approach_demo.Migrations.AddedValidationSchema1.resources
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.AspNet.Identity.Core.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Security.Cookies.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Security.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Security.OAuth.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Newtonsoft.Json.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Owin.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.AspNet.Identity.Core.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Security.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Security.Cookies.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Security.OAuth.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Newtonsoft.Json.xml
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF_first_approach_demo.IdentityMigrations.Initial.resources

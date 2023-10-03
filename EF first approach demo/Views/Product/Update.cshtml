@@ -1,0 +1,89 @@
+﻿@model EF_first_approach_demo.Models.Product
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<h1 class="text-center m-5 text-decoration-underline">Update Product Details</h1>
+@using (Html.BeginForm("update", "product", FormMethod.Post ,new { enctype = "multipart/form-data", @class = "bg-body-secondary p-3 my-3" }))
+{
+    @Html.TextBoxFor(temp => temp.ProductID , new {@type="hidden"})
+    
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.ProductName, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.ProductName, new { @class = "form-control", placeholder = "Product Name" })
+            @Html.ValidationMessageFor(Model => Model.ProductName)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Price, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Price, new { @class = "form-control", placeholder = "Amount" })
+            @Html.ValidationMessageFor(Model => Model.Price)
+        </div>
+    </div>
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.DateOfPurchase, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp=>temp.DateOfPurchase, new { @class="form-control", type="date"})
+            @Html.ValidationMessageFor(Model => Model.DateOfPurchase)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.AvailabilityStatus, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.AvailabilityStatus, new { placeholder = "Availability Status", @class = "form-control" })
+            @Html.ValidationMessageFor(Model => Model.AvailabilityStatus)
+        </div>
+    </div>
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Category.CategoryName, new { @class = "fw-bold" })
+            @Html.DropDownListFor(temp => temp.CategoryID, new SelectList(ViewBag.Category, "CategoryID", "CategoryName"), "Please Select", new { @class = "form-control" })
+            @Html.ValidationMessageFor(Model => Model.CategoryID)
+
+
+            @*<select class="form-control my-2" id="CategoryID" name="CategoryID">
+            <option value="value">Please Select</option>
+            @foreach (var item in ViewBag.Category)
+            {
+                if (Model.CategoryID == item.CategoryID)
+                {
+                    <option value="@item.CategoryID" selected="selected">@item.CategoryName</option>
+                }
+                else
+                {
+                    <option value="@item.CategoryID">@item.CategoryName</option>
+                }
+            }
+        </select>*@
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Brand.BrandName, new { @class = "fw-bold" })
+            @Html.DropDownListFor(temp => temp.BrandID, new SelectList(ViewBag.Brand, "BrandID", "BrandName"), "Please Select", new { @class = "form-control" })
+            @Html.ValidationMessageFor(Model => Model.Brand.BrandID)
+        </div>
+    </div>
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            <label for="Photo" class="fw-bold">Upload Product Image</label>
+            <input type="file" class="form-control " id="Image" name="Photo" />
+            @Html.ValidationMessageFor(Model => Model.Photo)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Quantity, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Quantity, new { @class = "form-control", type = "number", @Value = 1 })
+            @Html.ValidationMessageFor(Model => Model.Quantity)
+        </div>
+    </div>
+    <div class="form-check p-1">
+        <input class="my-2" type="checkbox" name="Active" checked="@Model.Active" />
+        <label for="Active" class="fw-bold">Active</label>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-outline-success m-2" type="submit">Update Details</button>
+        <a class="btn btn-outline-danger m-2" href="/product/index">Cancel</a>
+    </div>
+
+}
+
+
+
