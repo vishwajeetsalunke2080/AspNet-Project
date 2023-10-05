@@ -9,31 +9,31 @@
     <div class="form-group row my-3">
         <div class="col-md-6">
             @Html.LabelFor(temp => temp.Username, new { @class = "fw-bold" })
-            @Html.TextBoxFor(temp => temp.Username, new { @class = "form-control", placeholder = "Product Name" })
+            @Html.TextBoxFor(temp => temp.Username, new { @class = "form-control", placeholder = "enter username" })
             @Html.ValidationMessageFor(temp => temp.Username)
         </div>
         <div class="col-md-6">
             @Html.LabelFor(temp => temp.Email, new { @class = "fw-bold" })
-            @Html.TextBoxFor(temp => temp.Email, new { @class = "form-control", placeholder = "Amount" })
+            @Html.TextBoxFor(temp => temp.Email, new { @class = "form-control", placeholder = "enter email address" })
             @Html.ValidationMessageFor(temp => temp.Email)
         </div>
     </div>
     <div class="form-group row my-3">
         <div class="col-md-6">
             @Html.LabelFor(temp => temp.Password, new { @class = "fw-bold" })
-            @Html.TextBoxFor(temp => temp.Password, new { @class = "form-control", placeholder = "Amount" })
+            @Html.TextBoxFor(temp => temp.Password, new { @class = "form-control", placeholder = "enter password", @type = "password" })
             @Html.ValidationMessageFor(temp => temp.Password)
         </div>
         <div class="col-md-6">
             @Html.LabelFor(temp => temp.ConfirmPassword, new { @class = "fw-bold" })
-            @Html.TextBoxFor(temp => temp.ConfirmPassword, new { placeholder = "Availability Status", @class = "form-control" })
+            @Html.TextBoxFor(temp => temp.ConfirmPassword, new { placeholder = "confirm password", @class = "form-control" ,@type="password"})
             @Html.ValidationMessageFor(temp => temp.ConfirmPassword)
         </div>
     </div>
     <div class="form-group row my-3">
         <div class="col-md-6">
             @Html.LabelFor(temp => temp.Mobile, new { @class = "fw-bold" })
-            @Html.TextBoxFor(temp => temp.Mobile, new { @class = "form-control", type = "number" })
+            @Html.TextBoxFor(temp => temp.Mobile, new { @class = "form-control", type = "number", placeholder= "enter contact number" })
             @Html.ValidationMessageFor(temp => temp.Mobile)
         </div>
         <div class="col-md-6">
@@ -45,12 +45,12 @@
     <div class="form-group row my-3">
         <div class="col-md-6">
             @Html.LabelFor(temp => temp.Address, new { @class = "fw-bold" })
-            @Html.TextBoxFor(temp => temp.Address, new { @class = "form-control" })
+            @Html.TextBoxFor(temp => temp.Address, new { @class = "form-control" , placeholder="enter address"})
             @Html.ValidationMessageFor(temp => temp.Address)
         </div>
         <div class="col-md-6">
             @Html.LabelFor(temp => temp.City, new { @class = "fw-bold" })
-            @Html.TextBoxFor(temp => temp.City, new { @class = "form-control"})
+            @Html.TextBoxFor(temp => temp.City, new { @class = "form-control" , placeholder="enter city name"})
             @Html.ValidationMessageFor(temp => temp.City)
         </div>
     </div>
@@ -60,7 +60,7 @@
         <a class="btn btn-danger m-2" href="/account/login">Login</a>
     </div>
 
-    @Html.ValidationSummary()
+   
 }
 
 

@@ -1,0 +1,35 @@
+﻿@model List<EF_first_approach_demo.Identity.ApplicationUser>
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table table-bordered mt-4 text-center" >
+    <thead>
+        <tr>
+            
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Birthday</th>
+            <th>Contact</th>
+            <th>Modify</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.UserName != "admin")
+            {
+                <tr>
+                    <td>@item.UserName</td>
+                    <td>@item.Email</td>
+                    <td>@item.Address</td>
+                    <td>@item.BirthDay</td>
+                    <td>@item.PhoneNumber</td>
+                    <th><a href="/admin/usermanagement/updateUser/@item.Id" class="btn btn-outline-info">Update User</a></th>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

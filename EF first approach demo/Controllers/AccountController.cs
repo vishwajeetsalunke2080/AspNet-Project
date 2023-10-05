@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
+using EF_first_approach_demo.Filters;
 using EF_first_approach_demo.Identity;
 using EF_first_approach_demo.ViewModels;
 using Microsoft.AspNet.Identity;
@@ -38,7 +39,8 @@ namespace EF_first_approach_demo.Controllers
                     City = rvm.City,
                     BirthDay = rvm.DateOfBirth,
                     Address = rvm.Address,
-                    PhoneNumber = rvm.Mobile
+                    PhoneNumber = rvm.Mobile,
+                    IsAllowedLogin = true
                 };
 
                 IdentityResult result = usermanager.Create(user);
@@ -50,7 +52,14 @@ namespace EF_first_approach_demo.Controllers
                     var userIdentity = usermanager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                     authManager.SignIn(new AuthenticationProperties(), userIdentity);
                 }
-                return RedirectToAction("Login", "Account");
+                if(User.IsInRole("Admin"))
+                {
+                    return RedirectToAction("Index", "Home", new { area = "Admin" });
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }                
             }
             
             else
@@ -67,7 +76,7 @@ namespace EF_first_approach_demo.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost]        
         public ActionResult Login(LoginViewModel loginViewModel)
         {
             
@@ -83,17 +92,25 @@ namespace EF_first_approach_demo.Controllers
 
                     var appAuthManager = HttpContext.GetOwinContext().Authentication;
                     var userIdentity = userManager.CreateIdentity(user,DefaultAuthenticationTypes.ApplicationCookie);
-                    appAuthManager.SignIn(new AuthenticationProperties(),userIdentity);
-                    
-                    if(userManager.IsInRole(user.Id,"Admin"))
+
+                    if (user.IsAllowedLogin != false)
                     {
-                        return RedirectToAction("Index", "Home", new {area="Admin"});
+                        ViewBag.isAllowed = null;
+                        appAuthManager.SignIn(new AuthenticationProperties(), userIdentity);
+                        
+                        if (userManager.IsInRole(user.Id, "Admin"))
+                        {
+                            return RedirectToAction("Index", "Home", new { area = "Admin" });
+                        }
+                        else
+                        {
+                            return RedirectToAction("Index", "Home");
+                        }
                     }
                     else
-                    {
-                        return RedirectToAction("Index", "Home");
+                    {                        
+                        return Content("Login rights disabled by Admin","text");
                     }
-                    
                 }              
                 return View();
         }
@@ -114,7 +131,7 @@ namespace EF_first_approach_demo.Controllers
            
         }
 
-
+        [UserAuthenticationFilter]
         public ActionResult userProfile()
         {
             var userDbContext = new ApplicationDbContext();

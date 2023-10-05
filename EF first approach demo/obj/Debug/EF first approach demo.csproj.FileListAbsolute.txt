@@ -100,7 +100,6 @@ E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin
 E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Security.Cookies.xml
 E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Owin.Security.OAuth.xml
 E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Newtonsoft.Json.xml
-E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF_first_approach_demo.IdentityMigrations.Initial.resources
 E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Azure.Core.dll
 E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Azure.Identity.dll
 E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\Microsoft.Bcl.AsyncInterfaces.dll
@@ -166,3 +165,4 @@ E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\pt-BR\Microsof
 E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\ru\Microsoft.Data.SqlClient.resources.dll
 E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 E:\work\ASP.NET\EF first approach demo\EF first approach demo\bin\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+E:\work\ASP.NET\EF first approach demo\EF first approach demo\obj\Debug\EF_first_approach_demo.IdentityMigrations.initial.resources

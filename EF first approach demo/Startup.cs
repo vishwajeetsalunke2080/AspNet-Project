@@ -15,7 +15,7 @@ namespace EF_first_approach_demo
     {
         public void Configuration(IAppBuilder app)
         {
-            app.UseCookieAuthentication(new CookieAuthenticationOptions() { AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie, LoginPath= new PathString("/Accounts/Login" )});
+            app.UseCookieAuthentication(new CookieAuthenticationOptions() { AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie, LoginPath= new PathString("/Account/Login" )});
             this.createUsers();
         }
 

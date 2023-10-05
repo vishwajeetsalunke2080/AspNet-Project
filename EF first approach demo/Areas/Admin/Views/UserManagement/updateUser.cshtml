@@ -1,0 +1,54 @@
+﻿@model EF_first_approach_demo.Identity.ApplicationUser
+@{
+    ViewBag.Title = "updateUser";
+}
+
+<h1 class="text-center m-5 text-decoration-underline">Update Product Details</h1>
+@using (Html.BeginForm("updateUser", "usermanagement", new { area = "Admin" }, FormMethod.Post, new { @class = "bg-body-secondary p-3 my-3" }))
+{
+    @Html.TextBoxFor(temp => temp.Id, new { @type = "hidden" })
+
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.UserName, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.UserName, new { @class = "form-control", placeholder = "User Name" , disabled="true" })
+            @Html.ValidationMessageFor(Model => Model.UserName)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Email, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Email, new { @class = "form-control", placeholder = "Email" ,@type= "email" , disabled = "true" })
+            @Html.ValidationMessageFor(Model => Model.Email)
+        </div>
+    </div>
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.PhoneNumber, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.PhoneNumber, new { @class = "form-control", @type = "number", placeholder="contact number", disabled = "true" })
+            @Html.ValidationMessageFor(Model => Model.PhoneNumber)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Address, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.Address, new { @class = "form-control", placeholder = "Address" , disabled = "true" })
+            @Html.ValidationMessageFor(Model => Model.Address)
+        </div>
+    </div>
+    <div class="form-group row my-3">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.City, new { @class = "fw-bold" })
+            @Html.TextBoxFor(temp => temp.City, new { @class = "form-control" , disabled="true" })
+            @Html.ValidationMessageFor(Model => Model.City)
+        </div>
+        <div class="col-md-6 form-check form-switch">
+            @Html.CheckBoxFor(model => model.IsAllowedLogin, new { @class= "form-check-input" })
+            <label class="form-check-label" for="IsAllowedLogin">Access Allowed</label>
+            @Html.ValidationMessageFor(Model => Model.IsAllowedLogin)
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-outline-success m-2" type="submit">Update Details</button>
+        <a class="btn btn-outline-danger m-2" href="/admin/usermanagement/index">Cancel</a>
+    </div>
+
+}
+
+

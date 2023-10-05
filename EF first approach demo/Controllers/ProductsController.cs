@@ -1,4 +1,5 @@
-﻿using EF_first_approach_demo.Models;
+﻿using EF_first_approach_demo.Filters;
+using EF_first_approach_demo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,8 @@ using System.Web.Mvc;
 
 namespace EF_first_approach_demo.Controllers
 {
+    [UserAuthenticationFilter]
+    [CustomerAuthFilter]
     public class ProductsController : Controller
     {
         // GET: Products

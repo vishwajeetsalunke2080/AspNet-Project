@@ -12,5 +12,6 @@ namespace EF_first_approach_demo.Identity
         public DateTime? BirthDay { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
+        public bool IsAllowedLogin { get; set; }
     }
 }

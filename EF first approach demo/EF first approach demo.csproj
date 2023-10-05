@@ -322,6 +322,8 @@
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Brand\Index.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\UserManagement\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\UserManagement\updateUser.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -424,15 +426,19 @@
     <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserManagementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Filters\CustomerAuthFilter.cs" />
+    <Compile Include="Filters\UserAuthenticationFilter.cs" />
+    <Compile Include="Filters\AdminAuthorization.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IdentityMigrations\202310031107556_Initial.cs" />
-    <Compile Include="IdentityMigrations\202310031107556_Initial.designer.cs">
-      <DependentUpon>202310031107556_Initial.cs</DependentUpon>
+    <Compile Include="IdentityMigrations\202310051746068_initial.cs" />
+    <Compile Include="IdentityMigrations\202310051746068_initial.designer.cs">
+      <DependentUpon>202310051746068_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="IdentityMigrations\Configuration.cs" />
     <Compile Include="Identity\ApplicationDbContext.cs" />
@@ -507,8 +513,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="IdentityMigrations\202310031107556_Initial.resx">
-      <DependentUpon>202310031107556_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="IdentityMigrations\202310051746068_initial.resx">
+      <DependentUpon>202310051746068_initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310021320495_InitialCreate.resx">
       <DependentUpon>202310021320495_InitialCreate.cs</DependentUpon>
